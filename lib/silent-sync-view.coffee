@@ -34,14 +34,16 @@ class SilentSyncView extends View
         @config.host + ':' +
         @config.remoteDir
       )
-      .exclude @config.exclude
-      .include @config.include
       .delete()
+    @rsync.exclude @config.exclude if @config.exclude
+    @rsync.include @config.include if @config.include
 
   upload: ()->
     @changeStatus('Syncing')
     @rsync.execute (error, code, cmd) =>
       error.code = code if error
+      console.log code
+      console.log cmd
       @handleUpload(error)
 
 
@@ -82,7 +84,7 @@ class SilentSyncView extends View
     @tooltip?.dispose()
     $('.silent-sync-a')?.off 'click'
     if status == 'Error'
-      @tooltip = atom.tooltips.add document.querySelector('.silent-sync'),{title: 'Error Code: ' + @state.errorCode}
+      @tooltip = atom.tooltips?.add document.querySelector('.silent-sync'),{title: 'Error Code: ' + @state.errorCode}
       $('.silent-sync-a').on 'click', (e)=>
         e.preventDefault()
         atom.clipboard.write String(@state.errorCode)

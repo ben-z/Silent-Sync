@@ -64,8 +64,8 @@ module.exports =
       order: 9
 
   activate: (state)->
-    # atom.packages.once 'activated', =>
-    @silentSyncView = new SilentSyncView
+    atom.packages.once 'activated', =>
+      @silentSyncView = new SilentSyncView
 
   deactivate: ->
     @silentSyncView.destroy()
