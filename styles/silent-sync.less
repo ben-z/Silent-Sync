@@ -1,0 +1,39 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.silent-sync {
+  a {
+    .disconnected {
+      &:after {
+        content: 'Disconnected'
+      }
+    }
+    .connecting {
+      color: @text-color-warning;
+      &:after {
+        content: 'Connecting'
+      }
+    }
+    .syncing {
+      color: @text-color-warning;
+      &:after {
+        content: 'Syncing';
+      }
+    }
+    .error {
+      color: @text-color-error;
+      &:after {
+        content: 'Error';
+      }
+    }
+    .ready {
+      color: @text-color-success;
+      &:after {
+        content: 'Ready'
+      }
+    }
+  }
+}

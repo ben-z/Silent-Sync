@@ -8,7 +8,9 @@ class SilentSyncView extends View
 
   @content: ->
     @div class: 'status-stats inline-block silent-sync', =>
-      @a class: 'silent-sync-a', outlet: 'scriptLink', href: '#'
+      @a outlet: 'scriptLink', href: '#', =>
+        @span 'SilentSync: '
+        @span class: 'ss-status'
 
   initialize: (serializeState) ->
     # @root is the project root path
@@ -78,14 +80,17 @@ class SilentSyncView extends View
   changeStatus: (status)->
     # console.log 'Status: '+status
     @state.status = status
-    @find 'a'
-      .text "SilentSync: #{status}"
+    # @find '.ss-status'
+    #   .text "#{status}"
+
+    $('.ss-status').removeClass('disconnected connecting error ready syncing')
+    $('.ss-status').addClass(status.toLowerCase())
 
     @tooltip?.dispose()
-    $('.silent-sync-a')?.off 'click'
+    $('.silent-sync')?.off 'click'
     if status == 'Error'
       @tooltip = atom.tooltips?.add document.querySelector('.silent-sync'),{title: 'Error Code: ' + @state.errorCode}
-      $('.silent-sync-a').on 'click', (e)=>
+      $('.silent-sync').on 'click', (e)=>
         e.preventDefault()
         atom.clipboard.write String(@state.errorCode)
         $('.tooltip-inner')?.html('Copied: 255')
