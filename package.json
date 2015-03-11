@@ -1,0 +1,39 @@
+{
+  "name": "silent-sync",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "description": "Automatically takes care of the file syncing when you are working.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/silent-sync"
+  },
+  "license": "ISC",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^0.57.0": "consumeStatusBar"
+      }
+    }
+  },
+  "dependencies": {
+    "rsync": "^0.4.0",
+    "watch": "^0.14.0"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/silent-sync/issues"
+  },
+  "homepage": "https://github.com/atom/silent-sync",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sync",
+    "Silent",
+    "atom.io"
+  ],
+  "author": "Ben Zhang"
+}

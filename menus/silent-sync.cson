@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle silent-sync'
+      'command': 'silent-sync:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'silent-sync'
+      'submenu': [
+        {
+          'label': 'toggle'
+          'command': 'silent-sync:toggle'
+        }
+      ]
+    ]
+  }
+]
