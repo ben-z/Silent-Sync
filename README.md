@@ -1,4 +1,4 @@
-![Travis-CI](https://travis-ci.org/ben-z/Silent-Sync.svg)
+[![Travis-CI](https://travis-ci.org/ben-z/Silent-Sync.svg)](https://travis-ci.org/ben-z/Silent-Sync)
 
 # Slient Sync
 
