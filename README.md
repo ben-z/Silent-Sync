@@ -11,6 +11,8 @@ apm install silent-sync
 ## Features
 
 * Run your project both locally and on a remote environment through automatic uploading.
+* A nice little status bar widget<br />
+<img src="Statusbar.gif" width="70%"/>
 
 ## Settings
 
