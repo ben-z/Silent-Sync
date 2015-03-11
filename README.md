@@ -1,6 +1,6 @@
-[![Travis-CI](https://api.travis-ci.org/ben-z/Silent-Sync.svg?branch=master)](https://travis-ci.org/ben-z/Silent-Sync)
-
 # Slient Sync
+
+[![Build Status](https://api.travis-ci.org/ben-z/Silent-Sync.svg?branch=master)](https://travis-ci.org/ben-z/Silent-Sync)
 
 Silent Sync is built for simplicity and clearance. With minimal setup, it automates the uploading process of working with a remote server.
 
