@@ -5,7 +5,7 @@
   "description": "Automatically takes care of the file syncing when you are working.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/silent-sync"
+    "url": "https://github.com/ben-z/Silent-Sync"
   },
   "license": "ISC",
   "engines": {
@@ -23,7 +23,7 @@
     "watch": "^0.14.0"
   },
   "bugs": {
-    "url": "https://github.com/atom/silent-sync/issues"
+    "url": "https://github.com/ben-z/Silent-Sync/issues"
   },
   "homepage": "https://github.com/atom/silent-sync",
   "devDependencies": {},
