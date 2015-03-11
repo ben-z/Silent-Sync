@@ -102,7 +102,7 @@ class SilentSyncView extends View
       # if fs.existsSync @root + '/silent-sync.json'
         # Read config if exists
         # @config = JSON.parse(fs.readFileSync(@root + '/silent-sync.json'))
-      docsUrl = 'http://google.com/'
+      docsUrl = 'https://github.com/ben-z/Silent-Sync'
 
       if atom.config.get('silent-sync.useConfigFile')
         if fs.existsSync @root + '/silent-sync.json'
