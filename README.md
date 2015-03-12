@@ -58,6 +58,6 @@ After modifying the settings, restart the server by toggling it twice with `ctrl
 Error | Possible Reasons
 :---------:|:--------------
 Code `255` | Cannot connect to server. 1. Server is down. 2. Key file does not match. 3. Host is not trusted (try to `ssh [YOUR_HOST]` in terminal and try again.)
-Always displaying `SilentSync: Syncing` | Large projects can take a bit of time to sync. If it takes way too long, please create an issue with your code and the steps to reproduce the problem.
+Always displaying `SilentSync: Syncing` | Large projects can take a bit of time to sync. If it takes way too long, please create an issue with the steps to reproduce the problem.
 
 Note: This is my first [atom.io](https://atom.io/) plugin, please feel free to send [pull requests](https://github.com/ben-z/Silent-Sync/pulls) or report [issues and bugs](https://github.com/ben-z/Silent-Sync/issues)!
