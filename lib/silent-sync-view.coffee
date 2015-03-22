@@ -36,7 +36,7 @@ class SilentSyncView extends View
         @config.host + ':' +
         @config.remoteDir
       )
-      .delete()
+    @rsync.delete() if @config.deleteRemoteFiles
     @rsync.exclude @config.exclude if @config.exclude
     @rsync.include @config.include if @config.include
 

@@ -26,9 +26,10 @@ apm install silent-sync
 * `Enabled`: Only works when `Use configuration file` is off. Enable Silent Sync for your project.
 * `Host`: The SSH host. eg. somedomain.com
 * `Username`: The SSH username. eg. someone **Note:** authentication can only be done through an SSH key. [Here's a nice tutorial about it.](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
-* `Remote Directory`: The absolute path of the remote server (without the backslash). eg. `/home/someone/Projects/myproject`
-* `Excluded files`: An `array` of excluded files, relative to project root. (with first backslash, separated by commas) eg. `/node_modules, /someDir, /someSubDir`
-* `Included files`: Included files (that are excluded above, eg. subdirectories/files of excluded), same format as the excluded
+* `Remote Directory`: The absolute path of the remote server (without the backslash). eg. `/home/someone/Projects/myproject`.
+* `Excluded files`: An `array` of excluded files, relative to project root. (with first backslash, separated by commas) eg. `/node_modules, /someDir, /someSubDir`.
+* `Included files`: Included files (that are excluded above, eg. subdirectories/files of excluded), same format as the excluded.
+* `Delete Remote Files`: Remove any remote files that aren't present locally.
 
 ####Using `silent-sync.json` (Recommended)
 using a configuration file has the benefit of having a unique configuration for each project.
@@ -48,12 +49,13 @@ example `silent-sync.json`
   ],
   "include": [
     "/someDir/something"
-  ]
+  ],
+  "deleteRemoteFiles":true
 }
 
 ```
 
-After modifying the settings, restart the server by toggling it twice with `ctrl-alt-s` or using the menu to see the change take effect.
+After modifying the settings, restart the plugin by toggling it twice with `ctrl-alt-s` or using the menu to see the change take effect.
 
 ## Troubleshooting
 

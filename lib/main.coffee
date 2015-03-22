@@ -62,7 +62,12 @@ module.exports =
       items:
         type: 'string'
       order: 9
-
+    deleteRemoteFiles:
+      title: 'Delete Remote Files'
+      description: 'Remove any remote files that aren\'t present locally'
+      type: 'boolean'
+      default: false
+      order: 10
   activate: (state)->
     atom.packages.once 'activated', =>
       @silentSyncView = new SilentSyncView
