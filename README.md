@@ -4,6 +4,8 @@
 
 Silent Sync is built for simplicity and clearance. With minimal setup, it automates the uploading process of working with a remote server.
 
+*Warning: this plugin is not yet compatible with **windows**, please check back in a week or two as it's under active development :smile:. (Of course, any help is greatly appreciated!)*
+
 ## Installation
 
 ```bash
