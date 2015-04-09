@@ -94,8 +94,8 @@ class SilentSyncView extends View
         e.preventDefault()
         atom.clipboard.write String(@state.errorCode)
         $('.tooltip-inner')?.html('Copied: 255')
-  toggle: ->
-    if @state.connected
+  toggle: (action)->
+    if action == 'off' || (action != 'on' && @state.connected)
       # Switch off
       @detachStatus()
       @stopWatch()
@@ -125,6 +125,12 @@ class SilentSyncView extends View
       if proceed && @config.enabled && !@config.username
         atom.notifications.addWarning('\'Username\' field is missing in settings. [Read the docs]('+docsUrl+')')
         proceed = false
+
+
+      atom.project.onDidChangePaths (projectPaths) =>
+        # console.log 'changed path';
+        @root = projectPaths[0];
+        @toggle('on');
 
       if proceed && @config.enabled
         @attachStatus() # status = disconnected
