@@ -68,6 +68,12 @@ module.exports =
       type: 'boolean'
       default: false
       order: 10
+    rsyncFlags:
+      title: 'Flags'
+      description: 'Specify rsync flags.  Default flags are \'avz\'. eg. archive, verbose, and compress file data on transfer'
+      type: 'string'
+      default: 'avz'
+      order: 11
   activate: (state)->
     atom.packages.once 'activated', =>
       @silentSyncView = new SilentSyncView
