@@ -88,4 +88,4 @@ module.exports =
     @silentSyncView.toggle()
 
   consumeStatusBar: (statusBar) ->
-    console.log 'Status bar is being used'
+    console.log 'The status bar is being used.'
