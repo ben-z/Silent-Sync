@@ -29,7 +29,7 @@ class SilentSyncView extends View
     @changeStatus('Connecting')
     @rsync = new Rsync()
       .shell 'ssh'
-      .flags atom.config.get('silent-sync.rsyncFlags')
+      .flags @config.rsyncFlags
       .source @root + '/'
       .destination(
         @config.username + '@' +
