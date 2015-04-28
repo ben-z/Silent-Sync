@@ -1,7 +1,7 @@
 {
   "name": "silent-sync",
   "main": "./lib/main",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "Automatically takes care of the file syncing when you are working.",
   "repository": {
     "type": "git",
