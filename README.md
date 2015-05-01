@@ -30,6 +30,7 @@ apm install silent-sync
 * `Excluded files`: An `array` of excluded files, relative to project root. (with first backslash, separated by commas) eg. `/node_modules, /someDir, /someSubDir`.
 * `Included files`: Included files (that are excluded above, eg. subdirectories/files of excluded), same format as the excluded.
 * `Delete Remote Files`: Remove any remote files that aren't present locally.
+* `Flags`: Custom flags for Rsync, defaults to 'avz'. A list of flags can be found [here](Options Summary).
 
 ####Using `silent-sync.json` (Recommended)
 using a configuration file has the benefit of having a unique configuration for each project.
@@ -50,7 +51,8 @@ example `silent-sync.json`
   "include": [
     "/someDir/something"
   ],
-  "deleteRemoteFiles":true
+  "deleteRemoteFiles":true,
+  "rsyncFlags": "avz"
 }
 
 ```

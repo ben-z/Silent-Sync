@@ -75,7 +75,7 @@ module.exports =
       default: 'avz'
       order: 11
   activate: (state)->
-    atom.packages.once 'activated', =>
+    atom.packages.onDidActivateInitialPackages =>
       @silentSyncView = new SilentSyncView
 
   deactivate: ->
