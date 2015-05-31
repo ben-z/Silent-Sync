@@ -25,7 +25,7 @@ apm install silent-sync
 * `Missing configuration file notification`: When `Use configuration file` is selected, notify if `silent-sync.json` is missing.
 * `Enabled`: Only works when `Use configuration file` is off. Enable Silent Sync for your project.
 * `Host`: The SSH host. eg. somedomain.com
-* `Username`: The SSH username. eg. someone **Note:** authentication can only be done through an SSH key. [Here's a nice tutorial about it.](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+* `Username`: The SSH username. eg. someone **Note:** authentication can only be done through an SSH key. [Here's a nice tutorial about it.](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 * `Remote Directory`: The absolute path of the remote server (without the backslash). eg. `/home/someone/Projects/myproject`.
 * `Excluded files`: An `array` of excluded files, relative to project root. (with first backslash, separated by commas) eg. `/node_modules, /someDir, /someSubDir`.
 * `Included files`: Included files (that are excluded above, eg. subdirectories/files of excluded), same format as the excluded.
