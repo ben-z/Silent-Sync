@@ -28,7 +28,7 @@ class SilentSyncView extends View
   initUpload: ->
     @changeStatus('Connecting')
     @rsync = new Rsync()
-      .shell 'ssh'
+      .shell 'ssh -p ' + @config.port
       .flags @config.rsyncFlags
       .source @root + '/'
       .destination(
