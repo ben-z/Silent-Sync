@@ -30,7 +30,7 @@ class SilentSyncView extends View
     @rsync = new Rsync()
       .shell 'ssh -p ' + @config.port
       .flags @config.rsyncFlags
-      .source @root + '/'
+      .source @root + @config.path
       .destination(
         @config.username + '@' +
         @config.host + ':' +
