@@ -44,36 +44,42 @@ module.exports =
       title: 'Remote Directory'
       description: 'The absolute path of the remote server (without the backslash). eg. /home/someone/Projects/myproject'
       type: 'string'
-      default: '/home/someone/Projects/myproject'
+      default: './'
       order: 7
+    path:
+      title: 'Root Path'
+      description: 'The absolute path in the project directory'
+      type: 'string'
+      default: '/'
+      order: 8
     exclude:
       title: 'Excluded files'
       description: 'Excluded files, relative to project root. (with first backslash, separated by commas) eg. /node_modules, /someDir, /someSubDir'
       type: 'array'
-      default: ['/someDir']
+      default: ['']
       items:
         type: 'string'
-      order: 8
+      order: 9
     include:
       title: 'Included files'
       description: 'Included files (that are excluded above, eg. subdirectories/files of excluded), same format as the excluded'
       type: 'array'
-      default: ['/someDir/something','aaaaa']
+      default: ['*.*']
       items:
         type: 'string'
-      order: 9
+      order: 10
     deleteRemoteFiles:
       title: 'Delete Remote Files'
       description: 'Remove any remote files that aren\'t present locally'
       type: 'boolean'
       default: false
-      order: 10
+      order: 11
     rsyncFlags:
       title: 'Flags'
       description: 'Specify rsync flags.  Default flags are \'avz\'. eg. archive, verbose, and compress file data on transfer'
       type: 'string'
       default: 'avz'
-      order: 11
+      order: 12
   activate: (state)->
     atom.packages.onDidActivateInitialPackages =>
       @silentSyncView = new SilentSyncView
