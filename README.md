@@ -2,9 +2,9 @@
 
 [![Build Status](https://api.travis-ci.org/ben-z/Silent-Sync.svg?branch=master)](https://travis-ci.org/ben-z/Silent-Sync)
 
-Silent Sync is built for simplicity and clearance. With minimal setup, it automates the uploading process of working with a remote server.
+Silent Sync is built for simplicity and clarity. With minimal setup, it automates the uploading process of working with a remote server.
 
-*Warning: this plugin is not yet compatible with **windows**, please check back in a week or two as it's under active development :smile:. (Of course, any help is greatly appreciated!)*
+*Warning: this plugin is not yet compatible with **windows**, please check back in a week or two as it's under ~~active development~~ (unfortunately no longer active due to the lack of time, please check out [atom-sync](https://atom.io/packages/atom-sync) instead.) :smile:. (Of course, any help is greatly appreciated!)*
 
 ## Installation
 
