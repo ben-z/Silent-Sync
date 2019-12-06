@@ -1,5 +1,7 @@
 # Silent Sync
 
+**As of Dec 6, 2019, this project is (officially) no longer active.**
+
 [![Build Status](https://api.travis-ci.org/ben-z/Silent-Sync.svg?branch=master)](https://travis-ci.org/ben-z/Silent-Sync)
 
 Silent Sync is built for simplicity and clarity. With minimal setup, it automates the uploading process of working with a remote server.
